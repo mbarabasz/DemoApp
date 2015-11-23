@@ -14,3 +14,18 @@ eventsApp.filter('durations', function(){
         }
     }
 })
+
+eventsApp.filter('levels', function(){
+    return function(level){
+        switch(level){
+            case 'introductory':
+                return 'fa fa-battery-empty';
+            case 'intermediate':
+                return 'fa fa-battery-quarter';
+            case 'hard':
+                return 'fa fa-battery-half';
+            default:
+                return "fa fa-battery-full";
+        }
+    }
+})
